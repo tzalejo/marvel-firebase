@@ -1,0 +1,10 @@
+<mat-card>
+  <img mat-card-image src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="{{character.name}}" style="padding: 8px;">
+  <mat-card-title>
+    {{character.name}}
+  </mat-card-title>
+  <mat-card-footer>
+    <a href="{{character.urls[0].url}}" target="_blank" fxFlex mat-flat-button color="primary">Detalle</a>
+    <br>
+  </mat-card-footer>
+</mat-card>

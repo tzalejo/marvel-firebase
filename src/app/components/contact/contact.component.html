@@ -1,0 +1,25 @@
+
+<div class="form-container">
+  <h1>Contacto sobre API Marvel</h1>
+
+  <form [formGroup]="contactFrom"  >
+    <input type="text" formControlName="name" placeholder="Tu nombre">
+    <div class="alert-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+      <div *ngIf="name.errors.required" class="container-error-message">Nombre es requerido</div>
+      <div *ngIf="name.errors.minlength" class="container-error-message">Nombre tiene longuitud minima de 5 caracteres</div>
+    </div>
+    <input type="text" formControlName="email" placeholder="Tu correo electronico">
+    <div class="alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div *ngIf="email.errors.required" class="container-error-message">Email es requerido</div>
+      <div *ngIf="email.errors.minlength" class="container-error-message">Email tiene longuitud minima de 5 caracteres</div>
+      <div *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.pattern " class="container-error-message">Se debe ingresar un Email correcto</div>
+    </div>
+    <textarea cols="30" rows="10" formControlName="message" placeholder="Tu mensaje"></textarea>
+    <div class="alert-danger" *ngIf="message.invalid && (message.dirty || message.touched)">
+      <div *ngIf="message.errors.required" class="container-error-message">Mensaje es requerido</div>
+      <div *ngIf="message.errors.minlength" class="container-error-message">Nombre tiene longuitud minima de 10 caracteres</div>
+    </div>
+    <button [disabled]="!contactFrom.valid" class="btn-send" (click)="onSaveForm()">Enviar</button>
+
+  </form>
+</div>

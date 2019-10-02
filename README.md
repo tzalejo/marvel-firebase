@@ -25,3 +25,22 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Se instalo:
+
+$ ng add @angular/material
+$ ng g @angular/material:material-nav --name navbar
+
+// genrer el modulo router, si no lo instalamos al inicio..
+ng generate module app-routing --flat --module=app
+
+}// instalomos flex
+$ npm i @angular/flex-layout@latest
+
+// Para firebase-hosting
+npm install -g firebase-tools  
+
+## Trabaje con un formulario(trabajando con interface-) el cual almacena en firebase y luego consumimos un api de marvel 
+
+
